@@ -1,49 +1,4 @@
 
-<!-- <?php
-    include("config/conn.php");
-
-if (isset($_POST['bt_submit'])) {
-    // Dados do primeiro formulário
-    $cnpj = $_POST['cnpj'];
-    $ind_produto = $_POST['ind_produto'];
-    $atendimento = $_POST['atendimento'];
-
-    // echo "CNPJ: " . $cnpj . "<br>";
-    // echo "Nota do Produto: " . $ind_produto . "<br>";
-    // echo "Nota do Atendimento: " . $atendimento . "<br>";
-   // Insere os dados no banco de dados
-   $sql = "INSERT INTO formulario1 (cnpj, ind_produto, atendimento) VALUES ('$cnpj', $ind_produto, $atendimento)";
-   if (mysqli_query($conn, $sql)) {
-       header('location: index.php?result=ok'); // Redireciona em caso de sucesso
-   } else {
-       echo "Erro ao inserir dados: " . mysqli_error($conn);
-   }
-
-} elseif (isset($_POST['bt_submit2'])) {
-   // Dados do segundo formulário
-   $cnpj2 = $_POST['cnpj2'];
-   $recomendacao_prod = $_POST['recomendacao_prod'];
-   $satisfacao_empr = $_POST['satisfacao_empr'];
-
-      echo "CNPJ: " . $cnpj2 . "<br>";
-    // echo "Nota do Produto: " . $ind_produto . "<br>";
-    // echo "Nota do Atendimento: " . $atendimento . "<br>";
-   // Insere os dados no banco de dados
-
-   // Insere os dados no banco de dados
-   $sql = "INSERT INTO formulario2 (cnpj2, recomendacao_prod, satisfacao_empr) VALUES ('$cnpj2', $recomendacao_prod, $satisfacao_empr)";
-   if (mysqli_query($conn, $sql)) {
-       header('location: index.php?result=ok'); // Redireciona em caso de sucesso
-   } else {
-       echo "Erro ao inserir dados: " . mysqli_error($conn);
-   }
-}
-
-// Fechar a conexão
-mysqli_close($conn);
-
-?> -->
-
 <!DOCTYPE html>
 <html lang="pt-br
 ">
@@ -62,14 +17,7 @@ mysqli_close($conn);
 
     <h1>Questionário de Satisfação Usina Caeté</h1>
 
-    <!-- <?php if (isset($_GET['result']) && ($_GET['result'] == "ok")) { ?>
-        <div id="agradecimento" class="hide-mens">
-            <h3>Agradecemos sua participação!</h2>
-            <p class="agradec">Sua Opinião é muito importante.</p>
-        </div>
-    <?php } ?> -->
-
-    <main>
+   <main>
         <div class="container">
             <h1 class="h1-segmento">Escolha o Segmento</h1>
             <p id="frase-inicial">Por favor, escolha uma opção para fazer a avaliação:</p>
@@ -168,7 +116,7 @@ mysqli_close($conn);
                     <label for="atendimento-10">10</label>
                 </div>
                 <div class="questo-brt-btn">
-                    <button type="submit" disabled id="botaoEnviar" name="bt_submit" class="questo-btn">Enviar</button>
+                    <button type="button" disabled id="botaoEnviar" name="" class="questo-btn">Enviar</button>
                 </div>
             </div>
 
@@ -262,7 +210,7 @@ mysqli_close($conn);
                     <label for="satisfacao-10">10</label>
                 </div>
                 <div class="questo-brt-btn">
-                    <button type="submit" disabled id="botaoEnviar2" name="bt_submit2" class="questo-btn">Enviar</button>
+                    <button type="button" disabled id="botaoEnviar2" name="" class="questo-btn">Enviar</button>
                 </div>
             </div>
         </form>
@@ -277,15 +225,6 @@ mysqli_close($conn);
         $('#cnpj').mask('00.000.000/0000-00');
         $('#cnpj2').mask('00.000.000/0000-00');
     </script>
-    
-    <?php if (isset($_GET['result']) && ($_GET['result'] == "ok")) { ?>
-    <script>
-        setTimeout(() => {
-            $('.hide-mens').hide();
-        }, 4000);
-    </script>
-    <?php }?>
-
 </body>
 
 </html>

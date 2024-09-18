@@ -12,6 +12,7 @@ body {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    font-family: sans-serif;
 
 }
 
@@ -45,6 +46,7 @@ body {
 .h1-segmento {
     margin: 0;
     padding: 10px;
+
 }
 
 .btn-fechar {
@@ -144,7 +146,7 @@ h1 {
     text-align: center;
     margin-top: 5rem;
     color: rgb(20, 66, 131);
-    font-family: 'monospace';
+  
 }
 
 main {
@@ -325,7 +327,7 @@ label {
 @media (max-width: 768px) {
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-top: 2rem;
         padding: 0 12px;
 

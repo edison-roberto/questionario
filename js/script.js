@@ -80,9 +80,10 @@ function toggleButton() {
     const algumSelecionado2 = document.querySelector('input[name="atendimento"]:checked');
     const botao = document.querySelector('#botaoEnviar');
     if (algumSelecionado && algumSelecionado2) {
-        botao.disabled = false;
+         botao.disabled = false;
     } else {
         botao.disabled = true;
+        
     }
 }
 function toggleButton2() {
