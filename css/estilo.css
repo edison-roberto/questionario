@@ -199,7 +199,7 @@ p {
 
     width: 150px;
     height: 150px;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 5%;
     margin-right: 2%;
@@ -324,7 +324,7 @@ label {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     h1 {
         font-size: 1.8rem;
@@ -378,9 +378,15 @@ label {
 
     .img-logo {
 
-        display: none;
-
+        width: 150px;
+        height: 150px;
+        position: fixed;
+        right: 0;
+        bottom: 2%;
+        margin-right: 5%;
+        opacity: 1;
     }
+    
 
     .questo {
         text-align: center;
@@ -437,5 +443,17 @@ label {
         width: 80%;
         margin: auto;
     }
+
+}
+
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        padding: 0 12px;
+
+    }
+
 
 }
