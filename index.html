@@ -1,0 +1,291 @@
+
+<!-- <?php
+    include("config/conn.php");
+
+if (isset($_POST['bt_submit'])) {
+    // Dados do primeiro formulário
+    $cnpj = $_POST['cnpj'];
+    $ind_produto = $_POST['ind_produto'];
+    $atendimento = $_POST['atendimento'];
+
+    // echo "CNPJ: " . $cnpj . "<br>";
+    // echo "Nota do Produto: " . $ind_produto . "<br>";
+    // echo "Nota do Atendimento: " . $atendimento . "<br>";
+   // Insere os dados no banco de dados
+   $sql = "INSERT INTO formulario1 (cnpj, ind_produto, atendimento) VALUES ('$cnpj', $ind_produto, $atendimento)";
+   if (mysqli_query($conn, $sql)) {
+       header('location: index.php?result=ok'); // Redireciona em caso de sucesso
+   } else {
+       echo "Erro ao inserir dados: " . mysqli_error($conn);
+   }
+
+} elseif (isset($_POST['bt_submit2'])) {
+   // Dados do segundo formulário
+   $cnpj2 = $_POST['cnpj2'];
+   $recomendacao_prod = $_POST['recomendacao_prod'];
+   $satisfacao_empr = $_POST['satisfacao_empr'];
+
+      echo "CNPJ: " . $cnpj2 . "<br>";
+    // echo "Nota do Produto: " . $ind_produto . "<br>";
+    // echo "Nota do Atendimento: " . $atendimento . "<br>";
+   // Insere os dados no banco de dados
+
+   // Insere os dados no banco de dados
+   $sql = "INSERT INTO formulario2 (cnpj2, recomendacao_prod, satisfacao_empr) VALUES ('$cnpj2', $recomendacao_prod, $satisfacao_empr)";
+   if (mysqli_query($conn, $sql)) {
+       header('location: index.php?result=ok'); // Redireciona em caso de sucesso
+   } else {
+       echo "Erro ao inserir dados: " . mysqli_error($conn);
+   }
+}
+
+// Fechar a conexão
+mysqli_close($conn);
+
+?> -->
+
+<!DOCTYPE html>
+<html lang="pt-br
+">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <title>Grupo Carlos Lyra</title>
+</head>
+
+<body>
+
+    <h1>Questionário de Satisfação Usina Caeté</h1>
+
+    <!-- <?php if (isset($_GET['result']) && ($_GET['result'] == "ok")) { ?>
+        <div id="agradecimento" class="hide-mens">
+            <h3>Agradecemos sua participação!</h2>
+            <p class="agradec">Sua Opinião é muito importante.</p>
+        </div>
+    <?php } ?> -->
+
+    <main>
+        <div class="container">
+            <h1 class="h1-segmento">Escolha o Segmento</h1>
+            <p id="frase-inicial">Por favor, escolha uma opção para fazer a avaliação:</p>
+
+            <div class="button-container">
+                <button class="segment-btn" onclick="escolherIndustria('industria')">Indústria</button>
+                <button class="segment-btn2" onclick="escolherVarejo('Varejo')">Varejo / Atacado</button>
+            </div>
+
+        </div>
+
+        <form class="industria" action="#" method="post">
+            <div class="questo hide">
+                <!-- <img class="img-gcl" src="img/logo_gclBlack.png" alt="" width="150px"> -->
+                <div class="cnpj">
+                    <label for="cnpj">CNPJ:</label>
+                    <input type="text" id="cnpj" name="cnpj" placeholder="Digite seu CNPJ (opcional)">
+                </div>
+                <button class="btn-fechar" onclick="fecharForm()">X</button>
+
+                <p>Numa escala de 0 a 10, qual o seu grau de satisfação com a utilização
+                    do nosso produto enquanto matéria-prima?</p>
+
+                <div class="radio-group">
+
+                    <input type="radio" id="produto-0" name="ind_produto" value="0" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label class="produto" for="produto-0">0</label>
+                    <input type="radio" id="produto-1" name="ind_produto" value="1" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="produto-1">1</label>
+                    <input type="radio" id="produto-2" name="ind_produto" value="2" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="produto-2">2</label>
+                    <input type="radio" id="produto-3" name="ind_produto" value="3" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="produto-3">3</label>
+                    <input type="radio" id="produto-4" name="ind_produto" value="4" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="produto-4">4</label>
+                    <input type="radio" id="produto-5" name="ind_produto" value="5" onclick="definirCor(this)"
+                        required>
+                    <label for="produto-5">5</label>
+                    <input type="radio" id="produto-6" name="ind_produto" value="6" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="produto-6">6</label>
+                    <input type="radio" id="produto-7" name="ind_produto" value="7" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="produto-7">7</label>
+                    <input type="radio" id="produto-8" name="ind_produto" value="8" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="produto-8">8</label>
+                    <input type="radio" id="produto-9" name="ind_produto" value="9" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="produto-9">9</label>
+                    <input type="radio" id="produto-10" name="ind_produto" value="10" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="produto-10">10</label>
+                </div>
+
+                <p>Numa escala de 0 a 10, qual o seu grau de satisfação com o atendimento da nossa empresa?</p>
+
+                <div class="radio-group">
+                    <input type="radio" id="atendimento-0" name="atendimento" value="0" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="atendimento-0">0</label>
+                    <input type="radio" id="atendimento-1" name="atendimento" value="1" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="atendimento-1">1</label>
+                    <input type="radio" id="atendimento-2" name="atendimento" value="2" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="atendimento-2">2</label>
+                    <input type="radio" id="atendimento-3" name="atendimento" value="3" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="atendimento-3">3</label>
+                    <input type="radio" id="atendimento-4" name="atendimento" value="4" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="atendimento-4">4</label>
+                    <input type="radio" id="atendimento-5" name="atendimento" value="5" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="atendimento-5">5</label>
+                    <input type="radio" id="atendimento-6" name="atendimento" value="6" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="atendimento-6">6</label>
+                    <input type="radio" id="atendimento-7" name="atendimento" value="7" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="atendimento-7">7</label>
+                    <input type="radio" id="atendimento-8" name="atendimento" value="8" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="atendimento-8">8</label>
+                    <input type="radio" id="atendimento-9" name="atendimento" value="9" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="atendimento-9">9</label>
+                    <input type="radio" id="atendimento-10" name="atendimento" value="10" onclick="definirCor(this)"
+                        onchange="toggleButton()" required>
+                    <label for="atendimento-10">10</label>
+                </div>
+                <div class="questo-brt-btn">
+                    <button type="submit" disabled id="botaoEnviar" name="bt_submit" class="questo-btn">Enviar</button>
+                </div>
+            </div>
+
+        </form>
+
+        <form class="atacado" action="#" method="post">
+            <div class="questo-varejo hide">
+                <!-- <img class="img-gcl" src="img/logo_gclBlack.png" alt="" width="150px"> -->
+                <div class="cnpj">
+                    <label for="cnpj">CNPJ:</label>
+                    <input type="text" id="cnpj2" name="cnpj2" placeholder="Digite seu CNPJ (opcional)">
+                </div>
+                <button class="btn-fechar" onclick="fecharFormulario()">X</button>
+
+                <p>numa escala de 0 a 10, qual a probabilidade de você fazer uma
+                    recomendação ao consumo de nossa Marca e/ou Produto?</p>
+
+                <div class="grupo-produto">
+
+                    <input type="radio" id="prod-0" name="recomendacao_prod" value="0" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="prod-0">0</label>
+                    <input type="radio" id="prod-1" name="recomendacao_prod" value="1" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="prod-1">1</label>
+                    <input type="radio" id="prod-2" name="recomendacao_prod" value="2" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="prod-2">2</label>
+                    <input type="radio" id="prod-3" name="recomendacao_prod" value="3" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="prod-3">3</label>
+                    <input type="radio" id="prod-4" name="recomendacao_prod" value="4" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="prod-4">4</label>
+                    <input type="radio" id="prod-5" name="recomendacao_prod" value="5" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="prod-5">5</label>
+                    <input type="radio" id="prod-6" name="recomendacao_prod" value="6" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="prod-6">6</label>
+                    <input type="radio" id="prod-7" name="recomendacao_prod" value="7" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="prod-7">7</label>
+                    <input type="radio" id="prod-8" name="recomendacao_prod" value="8" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="prod-8">8</label>
+                    <input type="radio" id="prod-9" name="recomendacao_prod" value="9" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="prod-9">9</label>
+                    <input type="radio" id="prod-10" name="recomendacao_prod" value="10" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="prod-10">10</label>
+                </div>
+
+                <p>Numa escala de 0 a 10, qual o seu grau de satisfação com o
+                    atendimento da nossa empresa?</p>
+
+                <div class="grupo-produto">
+                    <input type="radio" id="satisfacao-0" name="satisfacao_empr" value="0" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="satisfacao-0">0</label>
+                    <input type="radio" id="satisfacao-1" name="satisfacao_empr" value="1" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="satisfacao-1">1</label>
+                    <input type="radio" id="satisfacao-2" name="satisfacao_empr" value="2" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="satisfacao-2">2</label>
+                    <input type="radio" id="satisfacao-3" name="satisfacao_empr" value="3" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="satisfacao-3">3</label>
+                    <input type="radio" id="satisfacao-4" name="satisfacao_empr" value="4" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="satisfacao-4">4</label>
+                    <input type="radio" id="satisfacao-5" name="satisfacao_empr" value="5" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="satisfacao-5">5</label>
+                    <input type="radio" id="satisfacao-6" name="satisfacao_empr" value="6" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="satisfacao-6">6</label>
+                    <input type="radio" id="satisfacao-7" name="satisfacao_empr" value="7" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="satisfacao-7">7</label>
+                    <input type="radio" id="satisfacao-8" name="satisfacao_empr" value="8" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="satisfacao-8">8</label>
+                    <input type="radio" id="satisfacao-9" name="satisfacao_empr" value="9" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="satisfacao-9">9</label>
+                    <input type="radio" id="satisfacao-10" name="satisfacao_empr" value="10" onclick="corButao(this)"
+                        onchange="toggleButton2()" required>
+                    <label for="satisfacao-10">10</label>
+                </div>
+                <div class="questo-brt-btn">
+                    <button type="submit" disabled id="botaoEnviar2" name="bt_submit2" class="questo-btn">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <img class="img-logo" src="img/logo-caete.png" alt="logo-caete">
+
+    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $('#cnpj').mask('00.000.000/0000-00');
+        $('#cnpj2').mask('00.000.000/0000-00');
+    </script>
+    
+    <?php if (isset($_GET['result']) && ($_GET['result'] == "ok")) { ?>
+    <script>
+        setTimeout(() => {
+            $('.hide-mens').hide();
+        }, 4000);
+    </script>
+    <?php }?>
+
+</body>
+
+</html>
