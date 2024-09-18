@@ -333,6 +333,20 @@ label {
 
     }
 
+    .btn-fechar {
+        position: absolute;
+        top: 3%;
+        right: 4%;
+        margin-top: 9px;
+        margin-left: 18px;
+        font-size: 20px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: #000;
+    }
+    
+
     .hide-mens{
         /* display: none; */
         text-align: center;
@@ -422,10 +436,7 @@ label {
 
     }
 
-    .btn-fechar {
-        display: none;
-    }
-
+   
     main {
         display: flex;
         justify-content: center;
