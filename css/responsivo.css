@@ -154,7 +154,7 @@
 }
 
 /* Para dispositivos móveis no modo paisagem */
-@media screen and (max-width: 600px) and (orientation: landscape) {
+@media screen and (max-width: 900px) and (orientation: landscape) {
     
     h1 {
         font-size: 1.6rem;
@@ -199,6 +199,7 @@
         height: 100px;
         bottom: 1%;
         right: 4%;
+        display: none;
     }
 
     .button-container {
