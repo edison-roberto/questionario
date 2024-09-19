@@ -22,10 +22,12 @@ body {
     padding: 20px 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 .cnpj {
-    margin: 10px 0px;
+    margin: 15px 0px;
+  
 }
 
 .cnpj input {
@@ -41,12 +43,18 @@ body {
     box-shadow: 0px 0px 4px #000;
 }
 
-
-
 .h1-segmento {
     margin: 0;
     padding: 10px;
 
+}
+
+.nome_cli{
+  position: absolute;
+  top: 0px;
+  left: 18.5rem;
+  margin-top: 5px;
+  
 }
 
 .btn-fechar {
@@ -142,9 +150,9 @@ body {
 } */
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
     color: rgb(20, 66, 131);
   
 }
@@ -153,7 +161,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
 
 }
 
@@ -311,160 +319,13 @@ label {
     color: #000;
 }
 
-.hide-mens{
+#agradecimento{
     margin: auto;
     text-align: center;
-    line-height: 10px;
-    padding-top: 10px;
-    background-color: rgb(20, 66, 131);
-    width: 400px;
-    height: 60px;
-    padding: 10px;
-    color: #fff;
+    color: rgb(20, 66, 131);
+    margin-top: 20px;
+}
+#agradecimento p{
+    font-size: 20px;
 }
 
-
-@media (max-width: 600px) {
-
-    h1 {
-        font-size: 1.8rem;
-        margin-top: 2rem;
-        padding: 0 12px;
-
-    }
-
-    .btn-fechar {
-        position: absolute;
-        top: 3%;
-        right: 4%;
-        margin-top: 9px;
-        margin-left: 18px;
-        font-size: 20px;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        color: #000;
-    }
-    
-
-    .hide-mens{
-        /* display: none; */
-        text-align: center;
-        align-items: 10px;
-     padding-top: 15px;
-        width: 300px;
-        height: 60px;
-       
-    }
-    h3{
-        font-size: 18px;
-    }
-
-    h2{
-        font-size: 18px;
-    }
-    
-
-    p {
-        font-size: 16px;
-        margin-top: 5px;
-    }
-
-
-    .container {
-        padding: 10px 20px;
-        background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
-    }
-
-    .img-gcl {
-        display: none;
-    }
-
-    .button-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .segment-btn,
-    .segment-btn2 {
-        width: 100%;
-    }
-
-    .img-logo {
-
-        width: 150px;
-        height: 150px;
-        position: fixed;
-        right: 0;
-        bottom: 2%;
-        margin-right: 5%;
-        opacity: 1;
-    }
-    
-
-    .questo {
-        text-align: center;
-        width: 100%;
-        padding-bottom: 60px;
-        background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
-    }
-
-    .questo-varejo {
-        padding-bottom: 60px;
-        text-align: center;
-        width: 100%;
-        background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
-
-    }
-
-    .radio-group {
-        display: flex;
-        gap: 0;
-        align-items: center;
-        justify-content: center;
-        margin-top: 5px;
-
-
-    }
-
-    .grupo-produto {
-        display: flex;
-        gap: 0px;
-        margin-top: 5px;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-   
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2rem;
-    }
-
-    p {
-        font-size: 16px;
-        margin-bottom: 5px;
-        padding: 3px 10px;
-    }
-
-    .questo-brt-btn .questo-btn {
-        width: 80%;
-        margin: auto;
-    }
-
-}
-
-@media (max-width: 400px) {
-
-    h1 {
-        font-size: 1.5rem;
-        margin-top: 2rem;
-        padding: 0 12px;
-
-    }
-
-
-}
