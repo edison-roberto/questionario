@@ -154,6 +154,27 @@
 }
 
 /* Para dispositivos móveis no modo paisagem */
+@media screen and (max-width: 600px) and (orientation: landscape) {
+    .container {
+        padding: 0px 16px;
+        margin-top: 0;
+       
+    }
+
+    main {
+        margin-top: 0;
+        
+    }
+
+    .radio-group, .grupo-produto {
+        margin-top: 0px;
+        height: 30vh;
+
+    }
+
+}
+
+
 @media screen and (max-width: 1200px) and (orientation: landscape) {
     
     h1 {
@@ -193,6 +214,8 @@
 
     .container {
         padding: 8px 16px;
+        margin-top: 1rem;
+       
     }
 
     .img-logo {
@@ -233,6 +256,13 @@
     .questo-brt-btn .questo-btn {
         width: 75%;
         margin: auto;
+    }
+
+    .h1-segmento {
+        margin: 0;
+        padding: 10px;
+       display: block;
+    
     }
 
   
