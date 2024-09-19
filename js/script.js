@@ -32,6 +32,7 @@ function fecharFormulario() {
 function definirCor(elemento) {
     // Identifica o grupo de inputs ao qual o elemento pertence
     const grupo = elemento.closest('.radio-group');
+    const btnFechar = document.querySelector('.btn-fechar');
 
     // Remove as cores de todos os rótulos dentro do grupo correspondente
     grupo.querySelectorAll('label').forEach(label => {
@@ -48,8 +49,10 @@ function definirCor(elemento) {
     } else if (elemento.value >= 9 && elemento.value <= 10) {
         label.classList.add('green');
     }
-
+   
+   
 }
+
 
 function corButao(elemento) {
     // Identifica o grupo de inputs ao qual o elemento pertence
