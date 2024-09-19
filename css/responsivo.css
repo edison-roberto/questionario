@@ -160,6 +160,7 @@
         font-size: 1.6rem;
         margin-top: 20px;
         padding: 0 8px;
+        display: none;
     }
 
     .nome_cli {
@@ -211,8 +212,19 @@
     }
 
     .radio-group, .grupo-produto {
-        margin-top: 4px;
+        margin-top: 0px;
+
     }
+
+    /* .radio-group {
+        display: flex;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+
+
+    } */
 
     main {
         margin-top: 1.5rem;
@@ -220,7 +232,10 @@
 
     .questo-brt-btn .questo-btn {
         width: 75%;
+        margin: auto;
     }
+
+  
 }
 
 
