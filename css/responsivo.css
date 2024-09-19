@@ -154,11 +154,11 @@
 }
 
 /* Para dispositivos móveis no modo paisagem */
-@media screen and (max-width: 900px) and (orientation: landscape) {
+@media screen and (max-width: 1200px) and (orientation: landscape) {
     
     h1 {
         font-size: 1.6rem;
-        margin-top: 1rem;
+        margin-top: 20px;
         padding: 0 8px;
     }
 
