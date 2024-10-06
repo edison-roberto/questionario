@@ -10,6 +10,9 @@
          width: 100%;
          margin: auto;
      }
+     .produto{
+        padding: 0px 0px;
+    }
 
      .cnpj{
         display: flex;
@@ -19,13 +22,13 @@
         height: 60px;
         position: absolute;
         top: 10px;
-        left: 2.5rem;
+        left: 3.2rem;
        
       
       }
 
      .h1-titulo h1 {
-         font-size: 1.5rem;
+         font-size: 1.4rem;
          text-align: center;
          color: #fff;
 
@@ -52,7 +55,7 @@
      #frase-inicial {
         
         margin-top: 10px;
-        font-size: 18px;
+        font-size: 15px;
          margin-bottom: 0px;
          color: rgb(20, 66, 131);
      }
