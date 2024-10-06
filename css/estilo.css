@@ -9,110 +9,178 @@ body {
     background-image: url(../img/BASE-CRISTAIS.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
     width: 100%;
-    overflow: hidden;
+    height: 100vh;
     font-family: sans-serif;
+}
 
+.h1-titulo{
+    background-color: rgb(20, 66, 131);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.h1-titulo h1{
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
 }
 
 .container {
     text-align: center;
-    background-image: linear-gradient(to right, rgb(49, 100, 170), rgb(255, 255, 255));
-    padding: 20px 50px;
+    background-color: #fff;
+    /* background-image: linear-gradient(to right, rgb(49, 100, 170), rgb(255, 255, 255)); */
+    padding: 10px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
 }
 
-.cnpj {
-    margin: 15px 0px;
-  
+.conteiner-questao{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin: auto;
+    width: 71%;
 }
 
+.conteiner-questao2{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+ 
+}
+.conteiner-segmento{
+    margin-top: 1rem;
+}
+.cnpj{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  color: #fff;
+  height: 60px;
+  position: absolute;
+  top: 10px;
+  left: 3.5rem;
+ 
+
+}
 .cnpj input {
     padding: 5px;
     outline: none;
     font-size: 15px;
-    background-color: #f0eaea;
-    border: 0;
+    background-color: #fff;
+    border: 1px solid rgb(20, 66, 131);
     font-style: italic;
+    /* flex-grow: 1; Faz o input crescer para ocupar o espaço restante */
+    width: 26rem;
 }
 
+.label-input{
+    display: flex;
+   
+}
+
+.cnpj label{
+  margin-left: 1rem;
+}
+.cnpj input::placeholder{
+    color: #000;
+}
 .cnpj input:focus {
     box-shadow: 0px 0px 4px #000;
 }
+#nome_cli1, #nome_cli2{
+    text-align: center; 
+    font-size: 15px;
+    color: #fff;
+    margin-top: 10px;
+    margin: auto;
+} 
 
 .h1-segmento {
     margin: 0;
     padding: 10px;
-
+    color: rgb(20, 66, 131);
 }
-
-.nome_cli{
-  position: absolute;
-  top: 0px;
-  left: 18.5rem;
-  margin-top: 5px;
-  
-}
-
 .btn-fechar {
     position: absolute;
-    top: 2%;
-    right: 2%;
+    top: 1%;
+    right: 3%;
     margin-top: 9px;
     margin-left: 18px;
     font-size: 20px;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    color: #000;
+    color: #fff;
 }
 
 #frase-inicial {
 
-    margin-top: 0px;
-    font-size: 16px;
+   
+    font-size: 20px;
     margin-bottom: 15px;
-    color: #000;
+    color: rgb(20, 66, 131);
 }
 
-.button-container {
+ .button-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    margin-bottom: 20px;
-}
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+    width: 100%;
+    gap: 1rem;
+} 
 
 .segment-btn {
     padding: 10px 0;
-    width: 40%;
     font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     background-color: rgb(20, 66, 131);
     color: white;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
 }
+
+.segment-btn:hover {
+  transform: scale(1.05); /* Aumenta o botão em 10% */
+}
+
+/* .segment-btn:active {
+    transform: scale(1.05); // Aumenta o botão em 5% ao clicar 
+} */
 
 .segment-btn2 {
     padding: 10px 0;
-    width: 40%;
+ 
     font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     background-color: rgb(20, 66, 131);
     color: white;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
 
 }
+.segment-btn2:hover {
+    transform: scale(1.05); /* Aumenta o botão em 10% */
+  }
+  
 
 .questo-brt-btn {
     width: 100%;
     display: flex;
     justify-content: end;
-    margin-top: 20px;
+    margin-top: 1.5rem;
 
 }
 
@@ -124,83 +192,67 @@ body {
     cursor: pointer;
     background-color: rgb(20, 66, 131);
     color: white;
-    transition: background-color 0.3s ease;
-
-}
-
-.segment-btn:hover {
-
-    color: #000;
-}
-
-.segment-btn2:hover {
-
-    color: #000;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
 }
 
 .questo-brt-btn .questo-btn:hover {
+    transform: scale(1.05); /* Aumenta o botão em 10% */
+  }
 
-    color: #000;
-}
 
 /* #mensagem-personalizada {
     font-size: 18px;
     margin-top: 20px;
 } */
 
-h1 {
-    font-size: 2.0rem;
-    text-align: center;
-    margin-top: 5rem;
-    color: rgb(20, 66, 131);
-  
-}
 
-main {
+
+/* main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
-
-}
+} */
 
 .questo {
-    background-image: linear-gradient(to right, rgb(49, 100, 170), rgb(255, 255, 255));
-    padding: 10px 20px;
-    border-radius: 10px;
-    width: 85%;
-    max-width: 100%;
-    min-height: 53vh;
+    background-image: linear-gradient( rgb(20, 66, 131), rgb(255, 255, 255));
+    padding: 0px 10px;
+    border-radius: 0px 10px 10px 10px;
+    width: 43rem;
+    height: 30rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
     margin: auto;
-
+    justify-content: center;
+    margin: 1px;
 }
 
 .questo-varejo {
 
-    background-image: linear-gradient(to right, rgb(49, 100, 170), rgb(255, 255, 255));
-    padding: 10px 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 100%;
-    min-height: 53vh;
+    background-image: linear-gradient( rgb(20, 66, 131), rgb(255, 255, 255));
+    padding: 0px 10px;
+    border-radius: 0px 10px 10px 10px;
+    width: 43rem;
+    height: 30rem;
+    /* max-width: 100%; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
     margin: auto;
+    justify-content: center;
+    margin: 1px;
 
 }
 
-p {
+
+/* p {
     font-size: 16px;
     margin-top: 15px;
-}
+} */
 
 .img-logo {
 
@@ -210,8 +262,21 @@ p {
     right: 0;
     bottom: 5%;
     margin-right: 2%;
-    opacity: 0.8;
+   
 }
+/* .img-logo-categoria{
+    width: 150px;
+    height: 150px;
+  
+  
+} */
+.cont-img-logo-categoria{
+  position: sticky;
+  top: 30rem;
+   margin-left: 1.8rem;
+}
+
+
 
 .questo input[type="radio"] {
     display: flex;
@@ -223,22 +288,32 @@ h2 {
     text-align: center;
     margin-bottom: 20px;
 }
+.paragrafos{
+  margin-top: 30px;
+    width: 100%;
+    color:#fff;
+    padding: 0px 5px;
+    text-align: center;
+  
+    
+}
 
 .radio-group {
     margin-top: 15px;
     display: flex;
-    gap: 5px;
+    /* gap: px; */
     align-items: center;
     justify-content: center;
+    color: #000;
 
 }
-
 .grupo-produto {
     display: flex;
-    gap: 5px;
+    /* gap: 5px; */
     margin-top: 15px;
     align-items: center;
     justify-content: center;
+    color: #000;
 
 }
 
@@ -255,11 +330,7 @@ label {
     min-width: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
-
 }
-
-
 
 .grupo-produto label {
     padding: 10px 5px;
@@ -312,22 +383,264 @@ label {
 
 }
 
+
 .questo-brt-btn:disabled {
     opacity: .4;
     cursor: default;
     color: #000;
 }
 
-.hide-mens{
-    margin: auto;
-    text-align: center;
-    line-height: 10px;
-    padding-top: 10px;
-    background-color: rgb(20, 66, 131);
-    width: 400px;
-    height: 60px;
+
+/* #agradecimento{
+   
+    color: rgb(20, 66, 131);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+} */
+
+#agradecimento {
+    color: rgb(20, 66, 131);
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
     padding: 10px;
-    color: #fff;
+    margin: 20px 0;
+    border-radius: 5px;
+    width: 100%;
 }
+
+#agradecimento p {
+    margin: 0;
+    font-size: 20px;
+}
+
+#voltarBtn {
+    background-color:rgb(20, 66, 131);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#voltarBtn:hover {
+    background-color: #0056b3;
+}
+
+
+
+h2{
+    font-size: 15px;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+.cor-escolhido{
+   margin-top: 1px;
+   width: 8rem;
+   height: 50rem;
+   background-color: #fff;
+   border-radius: 10px 0px 0px 10px;
+  
+  
+}
+
+.todas-cores {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+.item-cor {
+    display: flex;
+     gap: 5px;
+     flex-direction: column-reverse;
+}
+
+.todas-cores div {
+ 
+    /* display: flex; */
+    align-items: center;
+   font-size: 16px;
+    font-weight: bold;
+    color: white;
+ }
+
+/* .industria{
+    display: flex;
+} */
+
+.cor-vermelha {
+
+    width: 100%;
+    height: 20px;
+    background-color: red;
+    padding-left: 7px;
+    text-align: center;
+   padding: 2px;
+}
+
+.cor-amarela {
+    width: 100%;
+    height: 20px;
+    background-color: yellow;
+    text-align: center;
+    padding: 2px;
+   
+}
+
+.cor-amarela span{
+    color: black;
+}
+.cor-verde {
+    width: 100%;
+    height: 20px;
+    background-color: green;
+   text-align: center;
+   padding: 2px;
+}
+
+.item-cor p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+
+.cor-escolhido-varejo {
+    margin-top: 1px;
+    width: 12rem;
+    height: 14.5rem;
+    background-color: #fff;
+    border-radius: 10px 0px 0px 10px;
+}
+
+
+
+.todas-cores-varejo {
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+.item-cor-varejo {
+    display: flex;
+     gap: 5px;
+     flex-direction: column-reverse;
+}
+
+.todas-cores-varejo div {
+ 
+    display: flex;
+    align-items: center;
+   font-size: 16px;
+    font-weight: bold;
+    color: white;
+ 
+  
+}
+
+/* .industria{
+    display: flex;
+} */
+
+.cor-vermelha-varejo {
+    width: 100%;
+    height: 25px;
+    background-color: red;
+    padding-left: 7px;
+   justify-content: center;
+    padding: 4px;
+}
+
+.cor-amarela-varejo {
+    width: 100%;
+    height: 25px;
+    background-color: yellow;
+    justify-content: center;
+    padding: 4px;
+   
+}
+
+.cor-amarela-varejo span{
+    color: black;
+}
+.cor-verde-varejo {
+    width: 100%;
+    height: 25px;
+    background-color: green;
+    justify-content: center;
+   padding: 4px;
+}
+
+.item-cor-varejo p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+textarea {
+    width: 100%;
+  border: 1px solid rgb(20, 66, 131);
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 20px;
+    height: 5rem;
+}
+
+textarea:focus{
+    box-shadow: 0px 0px 4px #000;
+}
+
+#opiniaoForm textarea::placeholder {
+    color: #000;         
+    font-size: 15px;    
+    font-style: italic;  
+     
+}
+
+
+ /* #opiniao {
+    width: 100%;           
+    height: 100px;        
+    overflow-y: scroll;    
+    padding: 10px;         
+    border: 1px solid #ccc; 
+    font-size: 16px;      
+    box-sizing: border-box; 
+} */
+
+#opiniaoForm{
+ 
+    width: 100%;   
+      
+} 
+
+
+
+
+
 
 

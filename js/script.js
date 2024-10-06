@@ -1,28 +1,29 @@
 
 function escolherIndustria() {
     let container = document.querySelector('.container');
-    let questo = document.querySelector('.questo');
+    let questo = document.querySelector('.conteiner-questao');
+    // let escolher = document.querySelector('#cor-escolhido')
     container.classList.add('hide'); // Esconder o container
     questo.classList.remove('hide'); // Mostrar o formulário
 }
 
 function fecharForm() {
     let container = document.querySelector('.container');
-    let questo = document.querySelector('.questo');
+    let questo = document.querySelector('.conteiner-questao');
     questo.classList.add('hide');   // Esconder o formulário
     container.classList.remove('hide');  // Mostrar o container
 }
 
 function escolherVarejo() {
     let container = document.querySelector('.container');
-    let questo = document.querySelector('.questo-varejo');
+    let questo = document.querySelector('.conteiner-questao2');
     container.classList.add('hide'); // Esconder o container
     questo.classList.remove('hide'); // Mostrar o formulário
 }
 
 function fecharFormulario() {
     let container = document.querySelector('.container');
-    let questo = document.querySelector('.questo-varejo');
+    let questo = document.querySelector('.conteiner-questao2');
     questo.classList.add('hide');   // Esconder o formulário
     container.classList.remove('hide');  // Mostrar o container
 }
@@ -31,8 +32,7 @@ function fecharFormulario() {
 
 function definirCor(elemento) {
     // Identifica o grupo de inputs ao qual o elemento pertence
-    const grupo = elemento.closest('.radio-group');
-    const btnFechar = document.querySelector('.btn-fechar');
+     const grupo = elemento.closest('.radio-group');
 
     // Remove as cores de todos os rótulos dentro do grupo correspondente
     grupo.querySelectorAll('label').forEach(label => {
@@ -40,7 +40,7 @@ function definirCor(elemento) {
     });
 
     // Define a cor para o rótulo correspondente ao input clicado
-    const label = grupo.querySelector(`label[for="${elemento.id}"]`);
+    const label = grupo.querySelector('label[for="' + elemento.id +'"]');
 
     if (elemento.value >= 0 && elemento.value <= 5) {
         label.classList.add('red');
@@ -49,10 +49,8 @@ function definirCor(elemento) {
     } else if (elemento.value >= 9 && elemento.value <= 10) {
         label.classList.add('green');
     }
-   
-   
-}
 
+}
 
 function corButao(elemento) {
     // Identifica o grupo de inputs ao qual o elemento pertence
@@ -64,8 +62,8 @@ function corButao(elemento) {
         label.classList.remove('red', 'yellow', 'green');
     });
 
-    // Define a cor para correspondente ao input clicado
-    const label = grupo.querySelector(`label[for="${elemento.id}"]`);
+    // Define a cor correspondente ao input clicado
+    const label = grupo.querySelector('label[for="' + elemento.id + '"]');
 
     if (elemento.value >= 0 && elemento.value <= 5) {
         label.classList.add('red');
@@ -83,10 +81,9 @@ function toggleButton() {
     const algumSelecionado2 = document.querySelector('input[name="atendimento"]:checked');
     const botao = document.querySelector('#botaoEnviar');
     if (algumSelecionado && algumSelecionado2) {
-         botao.disabled = false;
+        botao.disabled = false;
     } else {
         botao.disabled = true;
-        
     }
 }
 function toggleButton2() {
@@ -100,6 +97,19 @@ function toggleButton2() {
     }
 }
 
+function srcCNPJ(id){
+    var nm = document.querySelector("#nome_cli" + id);
+    var cnpj = document.querySelector("#cnpj" + id).value;
+
+if(cnpj.length == 18){
+    fetch("config/srcCNPJ.php?cnpj=" + cnpj)
+    .then(resp => resp.text())
+    .then(resp => {
+        nm.innerHTML = resp;
+    })
+}
+}
+   
   
 
 
@@ -128,35 +138,4 @@ function toggleButton2() {
 
 
 
-
-// document.getElementById('questionario').addEventListener('submit', function(event) {
-//     event.preventDefault();
-
-//
-
-//     // Repita para outros inputs de rádio
-
-//     // Função para classificar as respostas
-//     function classificarResposta(valor) {
-//       if (valor >= 9) {
-//         return 'Promotor';
-//       } else if (valor >= 7) {
-//         return 'Neutro';
-//       } else {
-//         return 'Detrator';
-//       }
-//     }
-
-//     // Classificação das respostas
-//     let classificacaoProduto = classificarResposta(produtoSatisfacao);
-//     // Repita para outras classificações
-
-//     // Exibir resultado
-//     let resultado = `
-//       <p>Classificação (Produto - Indústria): <strong>${classificacaoProduto}</strong></p>
-//       <!-- Exiba outras classificações -->
-//     `;
-
-//     document.getElementById('result').innerHTML = resultado;
-//   });
 
