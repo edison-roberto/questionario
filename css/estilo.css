@@ -124,8 +124,7 @@ body {
 
 #frase-inicial {
 
-   
-    font-size: 20px;
+   font-size: 20px;
     margin-bottom: 15px;
     color: rgb(20, 66, 131);
 }
@@ -142,7 +141,7 @@ body {
 
 .segment-btn {
     padding: 10px 0;
-    font-size: 18px;
+    font-size: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -161,8 +160,7 @@ body {
 
 .segment-btn2 {
     padding: 10px 0;
- 
-    font-size: 18px;
+   font-size: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -289,7 +287,7 @@ h2 {
     margin-bottom: 20px;
 }
 .paragrafos{
-  margin-top: 30px;
+    margin-top: 30px;
     width: 100%;
     color:#fff;
     padding: 0px 5px;

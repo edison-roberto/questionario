@@ -25,7 +25,7 @@
       }
 
      .h1-titulo h1 {
-         font-size: 1.6rem;
+         font-size: 1.5rem;
          text-align: center;
          color: #fff;
 
@@ -38,7 +38,7 @@
          display: flex;
          justify-content: center;
          align-items: center;
-         padding: 3px 20px;
+         padding: 3px 0px;
          margin-bottom: 0rem;
 
      }
@@ -46,9 +46,27 @@
      .h1-segmento {
          margin: 0;
          padding: 3px;
-         font-size: 1.8rem;
+         font-size: 1.5rem;
 
      }
+     #frase-inicial {
+        
+        margin-top: 10px;
+        font-size: 18px;
+         margin-bottom: 0px;
+         color: rgb(20, 66, 131);
+     }
+     .button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 1rem;
+        padding-bottom: 3rem;
+        width: 100%;
+        gap: 1rem;
+       
+    } 
+     
 
      .conteiner-questao {
 
@@ -135,11 +153,12 @@
 
      .paragrafos {
          margin-top: 10px;
-         width: 80%;
+         width: 85%;
          color: #fff;
+        padding: 0px 0px;
      }
 
-     .questo-varejo {
+    .questo-varejo {
         text-align: center;
         width: 100%;
         margin: auto;
@@ -541,6 +560,10 @@
         margin-top: 10px;
         width: 100%;
         color: #fff;
+    }
+
+    .produto{
+        padding: 0px 50px;
     }
 
     .questo-brt-btn {
